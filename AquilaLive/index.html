@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="favicon.png" rel="icon" type="image/png">
+    <title>L'Aquila: Patrimonio Culturale</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jsonpath.js" crossorigin="anonymous"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+    <link href="map.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="map"></div>
+<div id="nav">
+<!--    <button class="inactive">Queries</button>-->
+    <a href="query.html">
+        <button class="active">Queries</button>
+    </a>
+</div>
+<div id="menu">
+
+    <input id="clp6tq1ay00js01qt1z3jcsx7" type="radio" name="rtoggle" value="satellite">
+    <label title="satellite" for="clp6tq1ay00js01qt1z3jcsx7">Satellite</label><br/>
+
+    <input id="clu9v8k53000q01nt0v7yd3h1" type="radio" name="rtoggle" value="OSM" checked="checked">
+    <label title="OSM" for="clu9v8k53000q01nt0v7yd3h1">OSM/Mapbox</label><br/>
+
+    <input id="cm5z8mf55001q01sge31ub5lx" type="radio" name="rtoggle" value="DNAS">
+    <label title="DNAS" for="cm5z8mf55001q01sge31ub5lx">DNAS Prot.Civ. 2020</label><br/>
+
+    <input id="ck3igi47n19971cpc5jbjggpj" type="radio" name="rtoggle" value="Zannoni">
+    <label title="Zannoni" for="ck3igi47n19971cpc5jbjggpj">Rizzi &amp; Zannoni 1804</label><br/>
+
+    <input id="cjx4kfic106zs1co7t4vfhjqs" type="radio" name="rtoggle" value="Vandi">
+    <label title="Vandi" for="cjx4kfic106zs1co7t4vfhjqs">Antonio Francesco Vandi 1753</label><br/>
+
+    <input id="cm5y2qx3m004l01r1eo650dbt" type="radio" name="rtoggle" value="Lauro">
+    <label title="Lauro" for="cm5y2qx3m004l01r1eo650dbt">Giacomo Lauro 1600</label><br/>
+
+</div>
+<div id="frameHolder" style="display: none"></div>
+<div id="myData" style="visibility: hidden"></div>
+<div id="myLinks" style="visibility: hidden"></div>
+<script src='map.js'></script>
+</body>
+</html>

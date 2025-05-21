@@ -1,0 +1,273 @@
+html {
+    background-color: rgb(250, 250, 250);
+    font-family: 'Roboto', sans-serif;
+}
+#queries {
+    /*position: absolute;*/
+    margin-right: 70%;
+    /*top: 5px;*/
+    /*left: 5px;*/
+    /*bottom: 5px;*/
+    padding-right: 10px;
+    color: darkslategray;
+    /*border: thin solid transparent;*/
+    /*border-radius: 4px;*/
+    /*box-shadow: 0 0 10px 2px rgba(0,0,0,.1);*/
+}
+#menu {
+    position: absolute;
+    right: 1.25em;
+    bottom: 2.5em;
+    padding: 10px;
+    z-index: 10;
+    color: darkslategray;
+    background-color: rgb(255,255,255);
+    /*border: thin inset transparent;*/
+    border-radius: 4px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+
+#menu label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 90%;
+    font-weight: 500;
+}
+
+div#myData {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    max-height: calc(100% - 4rem);
+    overflow: auto;
+    width: 25%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /*border: thin solid white;*/
+    background-color: rgb(255,255,255);
+    border-radius: 4px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+
+div#map {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+h1, h4, p, dd, dt, li, a, br {
+    line-height: 1.3rem;
+    color: darkslategray;
+}
+dt {
+    margin-top: 0.75em;
+    margin-bottom: 0.25em;
+}
+button span a {
+    color: black;
+    line-height: normal;
+}
+#frameHolder {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 230, 230, 0.4);
+}
+
+#dThumb {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    /*background-color: rgb(240, 240, 240);*/
+    /*border: thin solid white;*/
+    /*border-radius: 0.25rem;*/
+    /*box-shadow: 0 0 2px 1px rgba(0, 0, 0, .25);*/
+
+}
+
+#dWPedia {
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    /*    break-before: column;*/
+    /*    margin-top: 1rem;*/
+    /*    overflow: scroll;*/
+}
+#dWPedia h2, #dWPedia h3, #dWPedia h4, #dWPedia h5, #dWPedia h6, #dWPedia cite, #dWPedia li {
+    font-size: 0.95rem;
+    margin-top: 0;
+    font-weight: normal;
+    color: darkslategray;
+}
+
+#dWPedia h4 {
+    margin-top: 0;
+}
+
+#dWPedia b {
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+#dWPedia dd {
+    margin-inline-start: auto;
+}
+#dWPedia cite {
+    font-family: 'Roboto', sans-serif;
+}
+iframe {
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    border: thin solid white;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .25);
+    background-color: rgba(240, 240, 240, 0.25);
+}
+
+#myData p:first-of-type {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none
+}
+
+h1 {
+    font-family: 'Graduate', sans-serif;
+    font-weight: 550;
+    font-size: 1.1em;
+    text-align: left;
+    column-span: all;
+    line-height: 1.8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1em;
+}
+
+h4 {
+    font-family: 'Graduate', sans-serif;
+    font-size: 1.1em;
+    text-align: left;
+    margin-top: 0;
+}
+
+img {
+    /*width: -webkit-fill-available;*/
+    max-width: 98%;
+    max-height: 100%;
+    /*horiz-align: center;*/
+    border: thin inset white;
+    border-radius: 0.25rem;
+}
+
+ul {
+    padding-left: 0
+}
+
+li {
+    margin-bottom: 0.2rem
+}
+
+#queries button span {
+    width: max-content;
+}
+menu {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Graduate', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0.5em 0 0 0;
+    color: darkslategray;
+}
+aside {
+    font-family: 'Roboto', sans-serif;
+/*    font-family: 'Graduate', sans-serif; */
+    color: darkslategray;
+    font-size: 0.9em;
+    line-height: 1.3rem;
+    cursor:pointer;
+    /*padding-left: 1em;*/
+}
+aside::after {
+    content: " ↗"; /* */
+    font-family: 'Roboto', sans-serif;
+}
+#dWPedia ul, #dWPedia li {
+    list-style-type: none;
+}
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+    float: right;
+    margin: 1rem 1rem 0 0;
+}
+
+.mapboxgl-ctrl-geocoder {
+    height: 2rem;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+    padding: 6px 35px 8px;
+}
+
+.mapboxgl-ctrl-top-right {
+    top: 0.5rem;
+}
+
+.mapboxgl-ctrl-geocoder {
+    max-width: 9rem;
+    min-width: 9rem;
+}
+
+#queries aside {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 95%
+}
+/*a:before {content: '↗ '} */
+.resultFrame {
+    /*position: fixed;*/
+    left: 30%;
+    width: 70%;
+    height: 95%;
+    top: 5%;
+    right: 0px;
+    bottom: 0px;
+    border: none;
+    background-color: rgba(240, 240, 240, 0.25);
+    box-shadow: none;
+}
+#nav {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    top: 1em;
+    width: 12em;
+    left: 45%;
+    border: none;
+}
+/*#queries {*/
+/*    margin-top: 4%;*/
+/*}*/
+#nav button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    padding: 0.35em 1em;
+    border:none;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+#nav button.active {
+    color: darkslategray;
+    background-color: rgb(255,255,255)
+}
+#nav button.inactive {
+    color: gray;
+    background-color: rgb(245,245,245)
+}

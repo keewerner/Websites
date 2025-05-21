@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta charset="UTF-8">
+    <link href="favicon.png" rel="icon" type="image/png">
+    <title>Rome Data Fusion</title>
+    <meta content="initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport"/>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+          type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jsonpath.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+    <link href="map.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div id="menu">
+    <input id="cjhubrvva0n2d2rlm3451o80u" type="radio" name="rtoggle" value="OSM" checked="checked">
+    <label title="Openstreetmap/Mapbox" for="cjhubrvva0n2d2rlm3451o80u">OSM</label><br/>
+
+    <input id="cjwlw5etz2h7g1cqvb0j4mpib" type="radio" name="rtoggle" value="Governatorato 1935">
+    <label title="Istituto Italiano d'Arti Grafiche, Nuovissima pianta di Roma (1935)" for="cjwlw5etz2h7g1cqvb0j4mpib">Governatorato 1935</label><br/>
+
+    <input id="cjwlxzbar03751clistsob2cs" type="radio" name="rtoggle" value="Pianta Generale 1888">
+    <label title="R. Stab. Cart. C. Virano, Pianta generale di Roma (1888)" for="cjwlxzbar03751clistsob2cs">Pianta Generale 1888</label><br/>
+
+    <input id="ckas46zeq0h2h1inta5b8sesn" type="radio" name="rtoggle" value="Spithoever 1881">
+    <label title="Spithoever, Pianta della città di Roma (1881)" for="ckas46zeq0h2h1inta5b8sesn">Spithoever 1881</label><br/>
+
+    <input id="ckagk7i8g0kky1iqogn8rjiik" type="radio" name="rtoggle" value="Piano Regolatore 1875">
+    <label title="Giovanni Battista Maggi, Roma e i suoi dintorni arricchita del suo piano regolatore d’ampliamento (1875)" for="ckagk7i8g0kky1iqogn8rjiik">Piano Regolatore 1875</label><br/>
+
+    <input id="ckagob41t0vcv1inu40nid7tl" type="radio" name="rtoggle" value="Censo 1866">
+    <label title="Direzione del Censo, Pianta topografica di Roma (1866)" for="ckagob41t0vcv1inu40nid7tl">Censo 1866</label><br/>
+
+    <input id="ck3h2pwyt06k11cpgcxvs7q6s" type="radio" name="rtoggle" value="Pietro Ruga">
+    <label title="Pietro Ruga, Pianta della città di Roma con la indicazione di tutte le antichità e nuovi abbellimenti (1832)" for="ck3h2pwyt06k11cpgcxvs7q6s">Pietro Ruga 1832</label><br/>
+
+    <input id="cjtporgz8099b1fp7g6y2wdt5" type="radio" name="rtoggle" value="GB.Nolli 1748">
+    <label title="Giambattista Nolli, Grande pianta di Roma (1748)" for="cjtporgz8099b1fp7g6y2wdt5">GB.Nolli 1748</label><br/>
+
+    <input id="cjcvpi18c0oxl2rpzlbzxki2m" type="radio" name="rtoggle" value="FormaUrbis">
+    <label title="Rudolfo Lanciani, Forma Urbis (1901)" for="cjcvpi18c0oxl2rpzlbzxki2m">FormaUrbis</label><br/>
+
+    <input id="clee2zkjn004s01knhjiqinzn" type="radio" name="rtoggle" value="ArcheoSitar">
+    <label title="ArcheoSitar" for="clee2zkjn004s01knhjiqinzn">ArcheoSitar</label>
+</div>
+<div id="map"></div>
+<div id="frameHolder" style="display: none"></div>
+<div id="myData" style="visibility: hidden"></div> <!-- style="visibility: hidden" -->
+<div id="welcome" style="z-index: 100; padding: 1rem 2rem; background-color: rgb(250,250,250); border-radius: 4px; box-shadow: 0 0 10px 2px rgba(0,0,0,.1); z-index: 100; position: absolute; top: 40%; left: 25%; right: 25%; text-align: left">
+    <img src="https://dlib.biblhertz.it/logo/BH_LOGO_EN_3C_P_ORIZ.svg" alt="logo" style="width:400px; margin: 1rem -0.5rem 2rem; border: none; float: right; "/>
+
+    <p style="clear: right">This experimental WebGis aims to gather all better known monuments of the historical city center Rome of which the Biblioteca Hertziana - Max Planck Library of Art History has textual or graphical resources.</p>
+    <p>We provide direct links into our Library and Photographic Archive departments and add external sites which we gather from Wikidata.</p>
+    <p id="feedback">For questions, improvements or for signalling errors please get into <a href="mailto:werner@biblhertz.it">contact</a>.</p>
+    <p>Click anywhere on the map to start.</p>
+</div>
+<script src='map.js'></script>
+</body>
+
+</html>

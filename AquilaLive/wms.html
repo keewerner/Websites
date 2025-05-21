@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add a WMS source</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoia2V3ZXJuZXIiLCJhIjoiY2lqMGprNjVmMDA0NnYwbTVibHh5bWx6aSJ9.zB8-7hnUeIeYJsqzOjJ2Fg';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/light-v11',
+        zoom: 12,
+        center: [13.397988, 42.348011]
+    });
+
+    map.on('load', () => {
+        map.addSource('wms-test-source', {
+            'type': 'raster',
+            // use the tiles option to specify a WMS tile source URL
+            // https://docs.mapbox.comhttps://docs.mapbox.com/style-spec/reference/sources/
+            'tiles': [
+//                'http://geocatalogo.regione.abruzzo.it/erdas-iws/ogc/wms/?version=1.3.0   crs=EPSG:32633&dpiMode=1&format=image/png&layers=Mosaici_UTM-WGS84_CTR_10K_2007.ecw&styles&url=http://geocatalogo.regione.abruzzo.it/erdas-iws/ogc/wms/?version%3D1.3.0'
+                  'http://geocatalogo.regione.abruzzo.it/erdas-iws/ogc/wms/?bbox={bbox-epsg-32633}&format=image/png&service=WMS&version=1.3.0&request=GetMap&srs=EPSG:32633&transparent=true&width=256&height=256&layers=Mosaici_UTM-WGS84_CTR_10K_2007.ecw'
+//                'https://img.nj.gov/imagerywms/Natural2015?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=Natural2015'
+            ],
+            'tileSize': 256
+        });
+        map.addLayer(
+            {
+                'id': 'wms-test-layer',
+                'type': 'raster',
+                'source': 'wms-test-source',
+                'paint': {}
+            },
+            'building' // Place layer under labels, roads and buildings.
+        );
+    });
+</script>
+
+</body>
+</html>

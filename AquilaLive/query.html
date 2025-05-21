@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="favicon.png" rel="icon" type="image/png">
+    <title>L'Aquila: Patrimonio Culturale</title>
+<!--    <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>-->
+<!--    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!--    <script src="jsonpath.js" crossorigin="anonymous"></script>-->
+<!--    <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">-->
+<!--    <link rel="stylesheet"-->
+<!--          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"-->
+<!--          type="text/css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet"/>
+    <link href="map.css" rel="stylesheet" type="text/css"/>
+</head>
+<body style="background-color: white">
+<div id="nav">
+    <a href="index.html">
+        <button class="active">Map</button>
+    </a>
+<!--    <button class="inactive">Map</button>-->
+</div>
+     <div id="queries">
+         <h1>Wikidata Queries:</h1>
+         <span id="references" title="Opere menzionate nel volume di A. Leosini, Monumenti &amp;"><aside>Opere descritte da Leosini (Table)</aside></span>
+         <span id="hermitages" title="Eremi e chiese rupestri"><aside>Eremi e chiese rupestri (Map)</aside></span>
+         <span id="churches" title="Chiese (escluse cappelle, monasteri, ecc)"><aside>Chiese (ImageGrid)</aside></span>
+         <span id="churchesdestroyed" title="ex-Chiese, chiese distrutte ecc."><aside>Ex chiese, chiese distrutte ecc (Map)</aside></span>
+         <span id="religiousbuildings" title="Edifici religiosi (chiese, abbazie, conventi, ecc.)"><aside>Edifici religiosi (ImageGrid)</aside></span>
+         <span id="monasteries" title="Monasteri, conventi, grancie ecc."><aside>Monasteri (Map)</aside></span>
+         <span id="fortifications" title="Fortificazioni (torri, castelli ecc.)"><aside>Fortificazioni (Map)</aside></span>
+         <span id="buildings" title="Edifici privati e pubblici"><aside>Edifici privati e pubblici (ImageGrid)</aside></span>
+    <div id="result"><p style="position: absolute; top: 40%; left: 50%; width: 40%;">Wikidata query results will be shown here.</p></div>
+         </div>
+<script src='query.js'></script>
+</body>
+</html>

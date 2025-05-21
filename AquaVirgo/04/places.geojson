@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "places",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "SorgentiSalone", "title": "Sorgenti a Salone", "marker": "circle" }, "geometry": { "type": "Point", "coordinates": [ 12.6331098, 41.9112259 ] } },
+{ "type": "Feature", "properties": { "name": "FontanaTrevi", "title": "Fontana di Trevi", "marker": "circle" }, "geometry": { "type": "Point", "coordinates": [ 12.4832644, 41.9009839 ] } }
+]
+}
