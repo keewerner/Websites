@@ -1,0 +1,180 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="refresh" content="300"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+    <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+    <meta content="no-cache" http-equiv="Pragma"/>
+    <meta content="0" http-equiv="Expires"/>
+    <title>Aqua Virgo UniRoma3 & BHMPI</title>
+    <link rel="icon" href="favicon.png" type="image/png"/>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.css' rel='stylesheet'/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src='places.js'></script>
+    <link href='map.css' rel='stylesheet'/>
+</head>
+<body>
+<div id="menu">
+    <input id="clpv72kf201dq01qtd03ig1ka" type="radio" name="rtoggle" value="OSM" checked="checked">
+    <label title="Openstreetmap/Mapbox" for="clpv72kf201dq01qtd03ig1ka">OSM/MapBox 2025</label><br/>
+
+    <input id="clp6tq1ay00js01qt1z3jcsx7" type="radio" name="rtoggle" value="aerial">
+    <label title="Aerial 2024" for="clp6tq1ay00js01qt1z3jcsx7">Aerial 2024</label><br/>
+
+    <input id="ckas46zeq0h2h1inta5b8sesn" type="radio" name="rtoggle" value="Spithöver1881">
+    <label title="Casa Editrice Spithöver (1881)" for="ckas46zeq0h2h1inta5b8sesn">Spithöver 1881</label><br/>
+
+
+    <input id="cjtporgz8099b1fp7g6y2wdt5" type="radio" name="rtoggle" value="Nolli1748">
+    <label title="Giambattista Nolli, Grande pianta di Roma (1748)" for="cjtporgz8099b1fp7g6y2wdt5">GB.Nolli 1748</label><br/>
+
+    <input id="cjcvpi18c0oxl2rpzlbzxki2m" type="radio" name="rtoggle" value="FormaUrbis">
+    <label title="Rudolfo Lanciani, Forma Urbis (1901)" for="cjcvpi18c0oxl2rpzlbzxki2m">FormaUrbis 1915</label><br/>
+
+    <input id="clee2zkjn004s01knhjiqinzn" type="radio" name="rtoggle" value="ArcheoSitar">
+    <label title="ArcheoSitar" for="clee2zkjn004s01knhjiqinzn">ArcheoSitar 2024</label>
+</div>
+
+<div id='map'>
+    <div id="list">
+        <button data-id="SorgentiSalone"> <em>╥</em> &nbsp; Salone</button>
+        <button> <em>╠</em> &nbsp; Unnamed</button>
+        <button data-id="FontanaTrevi"> <em>╨</em> &nbsp; Trevi</button>
+    </div>
+<!--    <div class="mapboxgl-control-container">-->
+<!--            <div class="mapboxgl-ctrl-top-left">-->
+<!--                <div class="mapboxgl-ctrl-group mapboxgl-ctrl" style="background-color: rgba(255, 255, 255, 0.5);">-->
+<!--                    <button id="pitch" class="mapboxgl-ctrl-icon" onclick="window.pitchCounter = window.pitchCounter || 0; map.setPitch([45, 0][window.pitchCounter++ % 2]);"></button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+</div>
+
+<div id="features" style="z-index: 1000">
+    <!-- NOTABENE the first mark/id combo needs class="active" attribute set -->
+    <article id="SorgentiSalone" title="Sorgenti a Salone" class="active">
+        <h5>Le sorgenti dell’acquedotto Vergine a Salone</h5>
+    <section>
+        <p>Le sorgenti dell’acquedotto Vergine si trovano nella località denominata Salone, sita nella periferia est di
+            Roma, presso la via Collatina, a circa un chilometro al di fuori del Grande Raccordo Anulare.</p>
+        <div class="capsule">
+        <a data-fancybox data-caption="Cras neque mi, semper at interdum id, dapibus in leo. Suspendisse nunc leo, eleifend sit amet iaculis et, cursus sed turpis." href="https://photos.smugmug.com/Preview/i-Xjpj2jC/0/LvWQgV8dc84kTCBJL64XL7d59dD4B2hBLKsdTnqHN/O/IMG_20250518_162215.jpg">
+            <img src="https://photos.smugmug.com/Preview/i-Xjpj2jC/0/LvWQgV8dc84kTCBJL64XL7d59dD4B2hBLKsdTnqHN/O/IMG_20250518_162215.jpg" width="300px"/>
+        </a>
+            <p>Cras neque mi, semper at interdum id, dapibus in leo. Suspendisse nunc leo, eleifend sit amet iaculis et, cursus sed turpis.</p>
+        </div>
+        <p>L’esistenza della tenuta di Salone è attestata a partire dall’XI secolo, quando viene menzionata per la prima
+            volta in un atto dell’11 novembre 1065; in alcuni documenti di poco successivi si fa inoltre riferimento
+            alla presenza, in questo luogo, di un acquedotto (ricordato nel 1081) e di una torre (menzionata nel 1176),
+            che si dice eretta proprio accanto alle sorgenti dell’Acqua Vergine, e che a tutt’oggi sopravvive <a
+                    href="#SorgentiSalonen1" id="refSorgentiSalonen1">(1)</a> (fig.1).</p>
+        <div class="capsule"><img src="" width="300" height="200" title="[fig1]"/>
+            <p>La torre medievale presso le sorgenti dell’acquedotto Vergine (fig. 1)</p></div>
+        <p>La vasta tenuta di Salone, che si estendeva dall’Aniene alla via Prenestina e dall’attuale via dell’Acqua
+            Vergine al ponte di Nona, dopo alcuni passaggi di proprietà divenne definitivamente proprietà del Capitolo
+            della basilica di Santa Maria Maggiore nel 1366 <a href="#SorgentiSalonen2" id="refSorgentiSalonen2">(2)</a>.
+        </p>
+        <div class="capsule">
+            <a data-fancybox data-caption="Cras neque mi, semper at interdum id, dapibus in leo. Suspendisse nunc leo, eleifend sit amet iaculis et, cursus sed turpis." href="https://photos.smugmug.com/Preview/i-HfwFfFb/0/Kh2LmWJmw67BNHLkfHnvjpWknB4cKQTxkwjdLQZ3W/O/IMG_20250518_163816.jpg">
+                <img src="https://photos.smugmug.com/Preview/i-HfwFfFb/0/Kh2LmWJmw67BNHLkfHnvjpWknB4cKQTxkwjdLQZ3W/O/IMG_20250518_163816.jpg" width="300px"/>
+            </a>
+            <p>Cras neque mi, semper at interdum id, dapibus in leo. Suspendisse nunc leo, eleifend sit amet iaculis et, cursus sed turpis.</p>
+        </div>
+        <p>Nella pianta di Raffaello Fabretti pubblicata nel suo volume De aquis et aquaeductibus veteris Romae del 1680
+            è descritto il percorso dell’Aqua Virgo. Alla sorgente dell’acquedotto sono ben visibili la torre medioevale
+            e un muro di contenimento del bacino idrico di epoca romana a forma di mezzaluna situati a ovest del fiume
+            di Salone, un piccolo corso d’acqua che oggi esiste più.</p>
+        <p>Il Fabretti indica quest’ultimo come Rivus Herculanensus, facendo diretto riferimento a quanto raccontato da
+            Plinio in merito all’origine del nome dell’acquedotto: «vicino c’è il ruscello di Ercole, dal quale l’acqua
+            Vergine rifugge, guadagnandosi quel nome» <a href="#SorgentiSalonen3" id="refSorgentiSalonen3">(3)</a>
+            (fig.2).</p>
+        <div class="capsule"><img src="" width="300" height="200" title="[fig2]"/>
+            <p>Raffaello Fabretti, Sorgenti dell’Aqua Virgo a Salone, in Partis Latii A Roma Labicum Usque Descriptio,
+                particolare (fig. 2)</p></div>
+        <p>L’antica struttura semicircolare che conteneva le acque in età romana è oggi inglobata nel muro perimetrale
+            di una strada all’interno della proprietà ACEA al Km 12, 800 della via Collatina, ma era ancora integra fino
+            alla fine dell’Ottocento.</p>
+        <p>Ne rimangono alcune testimonianze in un disegno conservato a Berlino che il pittore Pier Leone Ghezzi
+            realizzò durante una perlustrazione delle fonti nel 1744 <a href="#SorgentiSalonen4"
+                                                                        id="refSorgentiSalonen4">(4)</a> (fig. 3) e
+            nelle fotografie
+            che lo studioso inglese di archeologia e di architettura gotica, John Henry Parker, fece fare durante il suo
+            soggiorno romano, tra il 1864 e il 1877 (figg. 4-6). In queste vecchie immagini anche la torre appare in
+            discreto stato di conservazione, migliore rispetto alla condizione attuale.</p>
+        <div class="capsule"><img src="" width="300" height="200" title="[fig3]"/>
+            <p>Pier Leone Ghezzi, Veduta delle sorgenti dell’Acqua Vergine a Salone, Berlino, Gemäldegalerie,
+                Kupferstichkabinett, Kdz 16924 (da aggiungere tecnica misure e data) (fig. 3)</p></div>
+        <div class="capsule"><img src="" width="300" height="200" title="[fig4]"/>
+            <p>Fonte dell’Acqua Vergine sulla via Collatina, fotografia J.H. Parker tratta da un disegno (1864-1866),
+                Roma, British School of Rome, inv. JHP[PHP]-0660 (fig. 4)</p></div>
+        <div class="capsule"><img src="" width="300" height="200" title="[fig5]"/>
+            <p>Fonte dell’Acqua Vergine e del bacino idrico a Salone, fotografia J.H. Parker, Roma (1867-1868), British
+                School of Rome inv. JHP[PHP]-0860 (fig. 5)</p></div>
+        <div class="capsule"><img src="" width="300" height="200" title="[fig6]"/>
+            <p>Fonte dell’Acqua Vergine e del bacino idrico a Salone fotografia J.H. Parker (1867-1868), Roma, British
+                School of Rome inv. JHP[PHP]-0861 (fig. 6)</p></div>
+        <p>A partire dal 1742 il pontefice Benedetto XIV ordinò nuovi lavori di ripristino e restauro dell’acquedotto
+            Vergine e delle sue sorgenti affinché l’acqua giungesse in gran quantità alla nuova fontana di Trevi (su
+            ‘fontana di Trevi’ link di collegamento con altro testo della mappa) che era allora in corso di
+            costruzione.</p>
+        <p>Nel 1744 in occasione di questi lavori venne rinvenuto in questa zona un sarcofago di marmo decorato con un
+            rilievo raffigurante una Scena di battaglia tra Amazzoni e Greci, oggi conservato ai Musei Capitolini
+            <a href="#SorgentiSalonen5" id="refSorgentiSalonen5">(5)</a> (fig. 7), all’interno del quale erano ancora
+            dei resti umani e un anello
+            d’oro con pietre preziose <a href="#SorgentiSalonen6" id="refSorgentiSalonen6">(6)</a>.</p>
+        <div class="capsule"><img src="" width="300" height="200" title="[fig7]"/>
+            <p>Sarcofago romano con Scene di battaglia tra Amazzoni e Greci, Roma, Musei Capitolini, inv. S 726, II
+                secolo d.C. (fig. 7)</p></div>
+        <p>Tra il 1775 e il 1776 vennero intrapresi nuovi scavi che portarono alla luce una grande quantità di opere tra
+            le quali una <a target="extern" href="https://catalogo.museivaticani.va/index.php/Detail/objects/MV.815.0.0">Afrodite accovacciata</a> passata ai Musei Vaticani <a href="#SorgentiSalonen7"
+                                                                            id="refSorgentiSalonen7">(7)</a>, una statua
+            di <a target="extern" href="https://www.liverpoolmuseums.org.uk/artifact/statue-of-dionysos">Dioniso</a> e un bellissimo gruppo scultoreo con Satiro ed ermafrodito (fig. 8) conservati entrambi nella
+            collezione Henry Blundell del National Museum di Liverpool <a href="#SorgentiSalonen8"
+                                                                          id="refSorgentiSalonen8">(8)</a>.</p>
+        <div class="capsule"><img src="" width="300" height="200" title="[fig7]"/>
+            <p>Satiro ed ermafrodito, Liverpool, National Museum of Liverpool, inv. 59.148.30, II secolo d.C. (fig.
+                8)</p>
+        </div>
+        <p>Ancora nel Novecento nuovi ritrovamenti archeologici e i resti di una villa <a href="#SorgentiSalonen9"
+                                                                                          id="refSorgentiSalonen9">(9)</a>
+            testimoniano la continua presenza di insediamenti in epoca romana presso le sorgenti dell’Aqua Virgo.</p>
+        <aside>
+            <p><a href="#refSorgentiSalonen1" id="SorgentiSalonen1">(1)</a> Colella 1999, p. 215; Bonavita 2020, p. 25.
+            </p>
+            <p><a href="#refSorgentiSalonen2" id="SorgentiSalonen2">(2)</a> Colella 1999, p. 215.</p>
+            <p><a href="#refSorgentiSalonen3" id="SorgentiSalonen3">(3)</a> Plinio [77-78 d.C.] 1986, IV, p. 497.</p>
+            <p><a href="#refSorgentiSalonen4" id="SorgentiSalonen4">(4)</a> Pinto 1986, p. 183.</p>
+            <p><a href="#refSorgentiSalonen5" id="SorgentiSalonen5">(5)</a> Stuart Jones 1912, pp. 323-324.</p>
+            <p><a href="#refSorgentiSalonen6" id="SorgentiSalonen6">(6)</a> Ficoroni 1757, pp. 137-138; Colella 1999, p.
+                217.</p>
+            <p><a href="#refSorgentiSalonen7" id="SorgentiSalonen7">(7)</a> Amelung 1908, II, pp. 680-684.</p>
+            <p><a href="#refSorgentiSalonen8" id="SorgentiSalonen8">(8)</a> Pietrangeli 1958, pp. 87-88; Colella 1999,
+                p.
+                218.</p>
+            <p><a href="#refSorgentiSalonen9" id="SorgentiSalonen9">(9)</a> Quilici 1977, pp. 134-138; Gatti
+                1901, pp. 155-156.</p>
+        </aside>
+    </section>
+    </article>
+    <article id="FontanaTrevi" title="Fontana di Trevi">
+    <h5>Fontana di Trevi</h5>
+    <section>
+        <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates
+            repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+            reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat <a
+                    href="#POINTBn1" id="refPOINTBn1">(1)</a>.</p>
+        <aside>
+            <p><a href="#refPOINTBn1" id="POINTBn1">(1)</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </aside>
+    </section>
+    </article>
+</div>
+<script src='map.js'></script>
+</body>
+</html>
