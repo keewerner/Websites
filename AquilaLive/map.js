@@ -266,9 +266,14 @@ map.on("click", function (e) {
                 mainContainer.appendChild(bibliography);
 
                 const gnd = document.createElement("aside");
-                gnd.innerHTML = '<span id="bhmpibib" title="GND ' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" >Hertziana Biblioteca</span>';
+                gnd.innerHTML = '<span id="bhmpibib" title="GND ' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" >Hertziana Biblioteca (Old)</span>';
                 mainContainer.appendChild(gnd);
             }
+
+            const swd = document.createElement("aside");
+            swd.innerHTML = '<span id="bhmpibibN" title="Search word ' + jsonpath.query(data, '$..labels.it.value') + '" >Hertziana Biblioteca (New)</span>';
+            mainContainer.appendChild(swd);
+
 
             //aggregating all records
             //header
@@ -473,7 +478,15 @@ map.on("click", function (e) {
             }).on('click', '#bhmpibib', function () {
                 $("iframe").remove();
                 $("#frameHolder").show('slow');
+                //document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.it.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.de.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.en.value')) + ',AND&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&lang=en&mode=advanced&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+                //old query for kubikat + GND
                 document.getElementById("frameHolder").innerHTML = '<iframe src="https://aleph.mpg.de/F/?func=find-a&local_base=KUB01&find_code=IGD&request=' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+            }).on('click', '#bhmpibibN', function () {
+                $("iframe").remove();
+                $("#frameHolder").show('slow');
+                document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.it.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.de.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.en.value')) + ',AND&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&lang=en&mode=advanced&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+                //old query for kubikat + GND
+                //document.getElementById("frameHolder").innerHTML = '<iframe src="https://aleph.mpg.de/F/?func=find-a&local_base=KUB01&find_code=IGD&request=' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" title="iFrame" width="100%" height="100%" allow=""></iframe>';
             }).on('click', '#bhmpifoto', function () {
                 $("iframe").remove();
                 $("#frameHolder").show('slow');

@@ -366,9 +366,13 @@ map.on("click", function (e) {
             }
             if (jsonpath.value(data, '$..claims.P227')) {
                 const gnd = document.createElement("button");
-                gnd.innerHTML = '<span id="bhmpibib" title="GND ' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" >Biblioteca</span>';
+                gnd.innerHTML = '<span id="bhmpibib" title="GND ' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" >Biblioteca (Old)</span>';
                 mainContainer.appendChild(gnd);
             }
+                const swd = document.createElement("button");
+                swd.innerHTML = '<span id="bhmpibibN" title="Search Word ' + jsonpath.query(data, '$..sitelinks.itwiki.title') + '" >Biblioteca (New)</span>';
+                mainContainer.appendChild(swd);
+
             if (jsonpath.value(data, '$..claims.P12855')) {
                 const bhmpi = document.createElement("button");
                 bhmpi.innerHTML = '<span id="bhmpifoto" title="OBJ ' + jsonpath.query(data, '$..claims.P12855[0].mainsnak.datavalue.value') + '">Fototeca</span>';
@@ -537,18 +541,12 @@ map.on("click", function (e) {
             }).on('click', '#bhmpibib', function () {
                 $("iframe").remove();
                 $("#frameHolder").show('slow');
-
-
-                document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.it.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.de.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.en.value')) + ',AND&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&lang=en&mode=advanced&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
-
-                // querying only the Italian variant:
-                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.it.value')) + '&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
-                // alternatively take the title from itwiki (works only where a wikipedia article exists) 
-                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..sitelinks.itwiki.title')) + '&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
-                // Alma does NOT search for GND
-                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '&tab=LibraryCatalog&search_scope=MyInstitution&vid=49MPG_KUBIKAT:VU1&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
                 // the OLD kubikat did allow search for GND
-                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://aleph.mpg.de/F/?func=find-a&local_base=KUB01&find_code=IGD&request=' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+                document.getElementById("frameHolder").innerHTML = '<iframe src="https://aleph.mpg.de/F/?func=find-a&local_base=KUB01&find_code=IGD&request=' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+            }).on('click', '#bhmpibibN', function () {
+                $("iframe").remove();
+                $("#frameHolder").show('slow');
+                document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.it.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.de.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.en.value')) + ',AND&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&lang=en&mode=advanced&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
             }).on('click', '#bhmpifoto', function () {
                 $("iframe").remove();
                 $("#frameHolder").show('slow');
