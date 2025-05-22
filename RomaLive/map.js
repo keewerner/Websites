@@ -537,8 +537,18 @@ map.on("click", function (e) {
             }).on('click', '#bhmpibib', function () {
                 $("iframe").remove();
                 $("#frameHolder").show('slow');
-                document.getElementById("frameHolder").innerHTML = '<iframe src="https://aleph.mpg.de/F/?func=find-a&local_base=KUB01&find_code=IGD&request=' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" title="iFrame" width="100%" height="100%" allow=""></iframe>';
-                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://aleph.mpg.de/F/?func=find-a&find_code=PER&request=&request_op=AND&find_code=WTI&request=&request_op=AND&find_code=WKO&request=&request_op=AND&filter_code_1=WSP&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3=&filter_code_4=WEF&filter_request_4=&local_base=KUB01&filter_code_7=WEM&filter_code_8=WAK&find_code=IGD&request=' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+
+
+                document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.it.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.de.value')) + ',OR&query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.en.value')) + ',AND&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&lang=en&mode=advanced&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+
+                // querying only the Italian variant:
+                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..labels.it.value')) + '&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+                // alternatively take the title from itwiki (works only where a wikipedia article exists) 
+                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + encodeURI(jsonpath.query(data, '$..sitelinks.itwiki.title')) + '&tab=Everything&search_scope=MyInst_and_CI&vid=49MPG_KUBIKAT:VU1&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+                // Alma does NOT search for GND
+                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://www.kubikat.org/discovery/search?query=any,contains,' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '&tab=LibraryCatalog&search_scope=MyInstitution&vid=49MPG_KUBIKAT:VU1&offset=0" title="iFrame" width="100%" height="100%" allow=""></iframe>';
+                // the OLD kubikat did allow search for GND
+                // document.getElementById("frameHolder").innerHTML = '<iframe src="https://aleph.mpg.de/F/?func=find-a&local_base=KUB01&find_code=IGD&request=' + jsonpath.query(data, '$..claims.P227[0].mainsnak.datavalue.value') + '" title="iFrame" width="100%" height="100%" allow=""></iframe>';
             }).on('click', '#bhmpifoto', function () {
                 $("iframe").remove();
                 $("#frameHolder").show('slow');
